@@ -367,10 +367,17 @@
                             </p>
                             <div class="subs-feilds">
                                 <div class="suscribe-input">
-                                    <input type="email" class="email form-control width-80" id="sus_email"
+                                    <form id="mc-form">
+                                        <input type="email" class="email form-control width-80" id="mc-email"
                                            placeholder="Email">
-                                    <button type="submit" id="sus_submit" class="add-btn width-20">Subscribe</button>
-                                    <div id="msg_Submit" class="h3 text-center hidden"></div>
+                                        <button type="submit" id="sus_submit" class="add-btn width-20">Subscribe</button>
+                                        <div id="msg_Submit" class="h3 text-center hidden"></div>
+                                    </form>
+                                </div>
+                                <div id="success-newsletter" style="display:none">
+                                    <div class="alert alert-success" role="alert">
+                                        <strong>Thanks!</strong> Your email was registered.
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -875,14 +882,9 @@
                             <p>
                                 Sign up to news with your email.
                             </p>
-                            <form action="">
-                                <div class="input-group">
-                                    <input type="email" class="form-control" placeholder="Your email">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-success" type="button" style="background: #2dc997;">Subscribe!</button>
-                                    </span>
-                                </div>
-                            </form>
+                            <a href="http://eepurl.com/dGDcPb" class="btn-default btn-success ready-btn" target="_blank" style="margin-top: 0">Subscribe!</a>
+
+                            <!--End mc_embed_signup-->
                         </div>
                     </div>
                 </div>
@@ -924,6 +926,24 @@
 <!-- Contact Form JavaScript File -->
 <!--<script src="contactform/contactform.js"></script>-->
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxchimp/1.3.0/jquery.ajaxchimp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxchimp/1.3.0/jquery.ajaxchimp.langs.min.js"></script>
+
+<script>
+
+    function callbackFunction (resp) {
+        if (resp.result === 'success') {
+            $("#mc-form").hide();
+            $("#success-newsletter").css('display','block');
+        }
+    }
+
+    $('#mc-form').ajaxChimp({
+        url: 'https://ibnbrazil.us19.list-manage.com/subscribe/post?u=b57f498f2bfdb504e295604f2&amp;id=9f1c479af9',
+        language: 'en',
+        callback: callbackFunction
+    });
+</script>
 <script src="js/main.js"></script>
 </body>
 
