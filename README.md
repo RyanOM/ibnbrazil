@@ -1,6 +1,8 @@
 # IBN Brazil
 
-Website for the Irish Business Network Brazil.
+This was the previous website for the Irish Business Network Brazil.
+The goal was to keep costs low. 
+This was then replaced with a Wordpress website that can now be viewed at: ibnbrazil.com
 
 ## Technologies
 - Built using [Bootstrap](https://getbootstrap.com/)
@@ -11,4 +13,4 @@ Website for the Irish Business Network Brazil.
 
 ## Live Version
 
-[https://ibnbrazil.com](https://ibnbrazil.com)
+[https://ibnbrazil.netlify.app/](https://ibnbrazil.netlify.app/)
